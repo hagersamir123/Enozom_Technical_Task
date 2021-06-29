@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/addEmployeeFragment">
+
+    <fragment
+        android:id="@+id/addEmployeeFragment"
+        android:name="com.example.enozomtechnicaltask.AddEmployeeFragment"
+        android:label="fragment_add_employee"
+        tools:layout="@layout/fragment_add_employee" />
+    <fragment
+        android:id="@+id/displyEmployeeFragment"
+        android:name="com.example.enozomtechnicaltask.DisplyEmployeeFragment"
+        android:label="fragment_disply_employee"
+        tools:layout="@layout/fragment_disply_employee" />
+</navigation>

@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="colorPrimary">#FF000000</color>
+    <color name="colorPrimaryOverlay">#433F4D50</color>
+    <color name="colorGreenDark">#729347</color>
+    <color name="colorGreen">#789949</color>
+    <color name="colorRed">#da0211</color>
+    <color name="colorOverlayGray">#51000000</color>
+    <color name="colorWhite">#fff</color>
+
+
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
