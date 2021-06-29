@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Madar Soft</string>
+    <string name="app_name"> enozom </string>
     <string name="welcome">Welcome</string>
     <string name="enter_your_data_to_start_the_journey">Enter your data to start the journey</string>
     <string name="username">Username</string>
@@ -12,6 +12,8 @@
     <string name="input_required">Input required</string>
     <string name="mail">Your Mail</string>
     <string name="skills">Skills</string>
+    <string name="Delete">Delete</string>
+    <string name="edit">Edit</string>
 
     <array name="skills_list">
         <item>Android</item>

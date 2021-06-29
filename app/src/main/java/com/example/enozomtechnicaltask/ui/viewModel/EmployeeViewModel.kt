@@ -36,11 +36,15 @@ class EmployeeViewModel @Inject constructor(private val repository: EmployeeRepo
      fun insertEmployee(emp:Employee) = viewModelScope.launch {
          repository.insertEmployee(emp)
     }
-    fun getAllData(id : Int) = viewModelScope.launch {
-        _alleData.value = repository.getEmployeeData(id = id) as EmployeeAndSkills
-     }
 
     fun getId(name : String) = viewModelScope.launch{
-        id = repository.getEmployeeId(name) as Int
+        if(repository.getEmployeeId(name) != null){
+            id = repository.getEmployeeId(name)
     }
+    }
+
+    fun deleteEmp(id :Int) = viewModelScope.launch {
+        repository.delete(id)
+    }
+
 }

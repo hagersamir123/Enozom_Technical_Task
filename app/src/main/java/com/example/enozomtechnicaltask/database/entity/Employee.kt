@@ -1,6 +1,8 @@
 package com.example.enozomtechnicaltask.database.entity
 
 import androidx.room.*
+import java.io.Serializable
+
 
 @Entity
 data class Employee(
@@ -10,6 +12,7 @@ data class Employee(
     val employeeName: String = "",
     val image: String,
     val mail: String,
+
 )
 
 @Entity(tableName = "Skills" ,

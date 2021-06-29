@@ -13,12 +13,12 @@ class EmployeeRepository @Inject constructor(private val dao: EmployeeDao) {
          dao.insertEmployee(emp)
     }
 
-    suspend fun getEmployeeId(name : String){
-        dao.getEmployeeId(name)
+    suspend fun getEmployeeId(name : String) : Int{
+       return dao.getEmployeeId(name)
     }
 
-    suspend fun getEmployeeData(id :Int){
-        dao.getByArtistId(id = id)
+    suspend fun delete(id :Int){
+        dao.deleteEmp(id)
     }
 
     suspend fun insertSkills(skillList:Skills){

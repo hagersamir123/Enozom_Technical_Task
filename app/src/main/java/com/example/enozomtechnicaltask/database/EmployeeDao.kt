@@ -1,9 +1,7 @@
 package com.example.enozomtechnicaltask.database
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.Query
-import androidx.room.Transaction
+import android.icu.text.Replaceable
+import androidx.room.*
 import com.example.enozomtechnicaltask.database.entity.Employee
 import com.example.enozomtechnicaltask.database.entity.EmployeeAndSkills
 import com.example.enozomtechnicaltask.database.entity.Skills
@@ -13,11 +11,11 @@ interface EmployeeDao {
 
 
     // insert new Employee
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertEmployee(vararg employee: Employee)
 
     // insert new Skills
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertSkills(skills: Skills)
 
     // select all employee data and skills
@@ -33,6 +31,9 @@ interface EmployeeDao {
     // select all employee data
     @Query("SELECT * FROM Employee")
     suspend fun getAllEmployee(): List<Employee>
+
+    @Query("DELETE FROM Employee WHERE empId = :id")
+    suspend fun deleteEmp(id : Int)
 
     // select all employee data
     @Query("SELECT empId FROM Employee where employeeName = :name")

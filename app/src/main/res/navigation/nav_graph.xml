@@ -18,5 +18,9 @@
         android:id="@+id/displyEmployeeFragment"
         android:name="com.example.enozomtechnicaltask.ui.fragment.displyEmployeeFragment.DisplyEmployeeFragment"
         android:label="fragment_disply_employee"
-        tools:layout="@layout/fragment_disply_employee" />
+        tools:layout="@layout/fragment_disply_employee" >
+<!--        <argument-->
+<!--            android:name="skill"-->
+<!--            app:argType="com.example.enozomtechnicaltask.database.entity.Skills" />-->
+    </fragment>
 </navigation>

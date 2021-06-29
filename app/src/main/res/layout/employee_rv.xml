@@ -10,7 +10,7 @@
 
 
     <ImageView
-        android:id="@+id/movie_img"
+        android:id="@+id/employee_img"
         android:layout_width="82dp"
         android:layout_height="82dp"
         android:background="@drawable/employee_item_background"
@@ -26,8 +26,8 @@
         android:layout_marginLeft="12dp"
         android:maxLines="2"
         android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/movie_img"
-        app:layout_constraintTop_toTopOf="@id/movie_img"
+        app:layout_constraintStart_toEndOf="@+id/employee_img"
+        app:layout_constraintTop_toTopOf="@id/employee_img"
         android:textStyle="bold"
         app:layout_constraintHorizontal_weight="700"
         tools:text="@string/username" />
@@ -43,8 +43,29 @@
         android:textSize="12sp"
         android:maxLines="3"
         app:layout_constraintTop_toBottomOf="@+id/name"
-        app:layout_constraintStart_toEndOf="@+id/movie_img"
+        app:layout_constraintStart_toEndOf="@+id/employee_img"
         tools:text="@string/mail" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/delete_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/Delete"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/mail" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/edit_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/delete_btn"
+        android:text="@string/edit"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="@+id/delete_btn" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
