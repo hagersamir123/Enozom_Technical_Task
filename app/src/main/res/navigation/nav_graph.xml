@@ -7,12 +7,16 @@
 
     <fragment
         android:id="@+id/addEmployeeFragment"
-        android:name="com.example.enozomtechnicaltask.AddEmployeeFragment"
+        android:name="com.example.enozomtechnicaltask.ui.fragment.addEmployeeFragment.AddEmployeeFragment"
         android:label="fragment_add_employee"
-        tools:layout="@layout/fragment_add_employee" />
+        tools:layout="@layout/fragment_add_employee" >
+        <action
+            android:id="@+id/action_addEmployeeFragment_to_displyEmployeeFragment"
+            app:destination="@id/displyEmployeeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/displyEmployeeFragment"
-        android:name="com.example.enozomtechnicaltask.DisplyEmployeeFragment"
+        android:name="com.example.enozomtechnicaltask.ui.fragment.displyEmployeeFragment.DisplyEmployeeFragment"
         android:label="fragment_disply_employee"
         tools:layout="@layout/fragment_disply_employee" />
 </navigation>

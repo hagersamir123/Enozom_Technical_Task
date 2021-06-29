@@ -13,8 +13,11 @@
     <string name="mail">Your Mail</string>
     <string name="skills">Skills</string>
 
-    <array name="gender_list">
-        <item>Male</item>
-        <item>Female</item>
+    <array name="skills_list">
+        <item>Android</item>
+        <item>Ios</item>
+        <item>PHP</item>
+        <item>ASP</item>
+        <item>NET</item>
     </array>
 </resources>

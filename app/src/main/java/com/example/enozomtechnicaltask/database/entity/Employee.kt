@@ -12,7 +12,7 @@ data class Employee(
     val mail: String,
 )
 
-@Entity(
+@Entity(tableName = "Skills" ,
     foreignKeys = [ForeignKey(
         entity = Employee::class,
         parentColumns = arrayOf("empId"),
@@ -28,13 +28,13 @@ data class Skills(
     val emp_id: Int
 
 )
-
+@Entity
 data class EmployeeAndSkills(
     @Embedded
     val employee: Employee,
     @Relation(
-        parentColumn = "id",
-        entityColumn = "artist"
+        parentColumn = "empId",
+        entityColumn = "emp_id"
     )
     val albums: List<Skills>
 )

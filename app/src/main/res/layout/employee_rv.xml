@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/employee_item_background"
+    android:layout_marginBottom="16dp"
+    android:padding="16dp">
+
+
+    <ImageView
+        android:id="@+id/movie_img"
+        android:layout_width="82dp"
+        android:layout_height="82dp"
+        android:background="@drawable/employee_item_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:maxLines="2"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/movie_img"
+        app:layout_constraintTop_toTopOf="@id/movie_img"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_weight="700"
+        tools:text="@string/username" />
+
+
+    <TextView
+        android:id="@+id/mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="12dp"
+        android:textSize="12sp"
+        android:maxLines="3"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintStart_toEndOf="@+id/movie_img"
+        tools:text="@string/mail" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

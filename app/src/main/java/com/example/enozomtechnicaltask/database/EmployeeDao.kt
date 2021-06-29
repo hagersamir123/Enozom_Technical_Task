@@ -8,17 +8,17 @@ import com.example.enozomtechnicaltask.database.entity.Employee
 import com.example.enozomtechnicaltask.database.entity.EmployeeAndSkills
 import com.example.enozomtechnicaltask.database.entity.Skills
 
-
 @Dao
-interface Dao {
+interface EmployeeDao {
+
 
     // insert new Employee
     @Insert
-    suspend fun insertAll(vararg users: Employee)
+    suspend fun insertEmployee(vararg employee: Employee)
 
     // insert new Skills
     @Insert
-    suspend fun insertSkills(artist: Skills)
+    suspend fun insertSkills(skills: Skills)
 
     // select all employee data and skills
     @Transaction
@@ -34,4 +34,7 @@ interface Dao {
     @Query("SELECT * FROM Employee")
     suspend fun getAllEmployee(): List<Employee>
 
+    // select all employee data
+    @Query("SELECT empId FROM Employee where employeeName = :name")
+    suspend fun getEmployeeId(name : String): Int
 }
